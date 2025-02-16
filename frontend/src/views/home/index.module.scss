@@ -1,0 +1,91 @@
+@use "../../styles/variables";
+
+.intro {
+    width: 70%;
+    max-width: 72rem;
+    display: flex;
+    margin-left: auto;
+    font-size: 1.2rem;
+    margin-right: auto;
+    padding: 2rem;
+    align-items: center;
+    justify-content: space-around;
+
+    &>p {
+        font-size: 1.6rem;
+        max-width: 650px;
+        text-align: center;
+    }
+}
+
+.friends {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    max-width: 72rem;
+    width: 70%;
+    flex-wrap: wrap;
+    padding-bottom: 1rem;
+}
+
+.friendsWrapper {
+    width: 70%;
+    max-width: 72rem;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+
+    &>h1 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.friend {
+    width: 100px;
+
+    &>img {
+        width: 100px;
+        border-radius: 50%;
+        transition: .2s box-shadow cubic-bezier(.25, .8, .25, 1);
+        border: 2px solid variables.$text-color;
+
+        &:hover {
+            box-shadow: 0 8px 15px variables.$text-color, 0 6px 6px variables.$text-color;
+        }
+    }
+}
+
+.pfp {
+    &>p {
+        text-align: center;
+        font-weight: 500;
+    }
+
+    &>img {
+        width: 300px;
+        border-radius: 15%;
+    }
+}
+
+@media (max-width: 767px) {
+    .intro {
+        flex-direction: column;
+        gap: 3rem;
+
+        &>p {
+            font-size: 1.2rem;
+            max-width: 850px;
+        }
+    }
+
+    .friendsWrapper {
+        width: 100%;
+        margin-top: unset;
+        text-align: center;
+    }
+}

@@ -1,0 +1,118 @@
+@use "../../styles/variables";
+$trans-colors: #5BCEFA, #F5A9B8, #FFFFFF;
+
+.header {
+    max-width: 72rem;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 2rem;
+    flex-direction: row;
+    width: 70%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 767px) {
+    .header {
+        flex-direction: column-reverse;
+        gap: 1rem;
+
+        .buttons {
+            font-size: 1rem;
+            gap: 3rem;
+
+            &>a {
+                font-size: 1.2rem;
+            }
+        }
+
+        &>:nth-child(1) {
+            text-align: center;
+        }
+
+        .desc {
+            font-size: 1rem;
+        }
+
+        .username {
+            line-height: 1;
+            font-size: 2.5rem;
+
+            &>p {
+                width: unset;
+                -webkit-text-fill-color: unset;
+
+
+                &>a {
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+    &>a {
+        transition: all 0.2s ease-in-out;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.5rem;
+
+        &:hover {
+            text-decoration: underline;
+            color: variables.$secondary-color;
+        }
+    }
+}
+
+.username {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 2rem;
+    font-weight: 700;
+
+    &>p {
+        width: fit-content;
+        color: white;
+        -webkit-text-fill-color: transparent;
+        background: linear-gradient(to right, white, white, nth($trans-colors, 1), nth($trans-colors, 2), nth($trans-colors, 3), nth($trans-colors, 2), nth($trans-colors, 1), white, white);
+        background-clip: text;
+        background-position: 100% 0;
+        background-size: 800%;
+        transition: background-position 1.5s;
+
+        &:hover {
+            background-position: 0%;
+        }
+    }
+}
+
+.desc {
+    font-size: 1.5rem;
+    line-height: 1.25rem;
+}
+
+.headerWrapper {
+    width: 100%;
+}
+
+.blue {
+    color: nth($trans-colors, 1);
+}
+
+.pink {
+    color: nth($trans-colors, 2);
+}
+
+.white {
+    color: nth($trans-colors, 3);
+}

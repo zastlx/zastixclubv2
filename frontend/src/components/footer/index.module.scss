@@ -1,0 +1,14 @@
+@use "../../styles/variables";
+$trans-colors: #5BCEFA, #F5A9B8, #FFFFFF;
+
+.footer {
+    display: flex;
+    margin-top: auto;
+    width: 100%;
+    background-color: darken(variables.$primary-color, 5);
+    align-items: center;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    justify-content: center;
+    text-align: center;
+}

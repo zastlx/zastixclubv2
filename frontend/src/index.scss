@@ -1,0 +1,36 @@
+@use "styles/variables.scss";
+
+body {
+    margin: 0;
+    line-height: inherit;
+    background-color: variables.$primary-color;
+}
+
+html {
+    line-height: 1.5;
+}
+
+p {
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    font-family: "Fira Code", monospace;
+    color: variables.$text-color;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
