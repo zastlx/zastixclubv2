@@ -14,20 +14,10 @@ model Posts {
   date    DateTime @default(now())
 }
 
-model Reviews {
-  id      Int    @id @unique @default(autoincrement())
-  name    String
-  review  String
-  link    String
-  discord String @default("")
-}
-
 model Projects {
-  id      Int     @id @unique @default(autoincrement())
-  link    String
-  name    String
-  img     String
-  desc    String
-  src     String?
-  outline Boolean @default(true)
+  id          Int    @id @unique @default(autoincrement())
+  name        String
+  description String
+  image       String
+  link        String
 }

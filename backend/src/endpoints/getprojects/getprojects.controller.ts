@@ -5,7 +5,7 @@ import { GetProjectsService } from "./getprojects.service";
 export class GetProjectsController {
 	constructor(private readonly projectService: GetProjectsService) { }
 
-	@Get("/getprojects/")
+	@Get("/projects/")
 	async getReviews() {
 		return this.projectService.getProjects();
 	}

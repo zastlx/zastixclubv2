@@ -1,9 +1,8 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import { Home } from "./views";
-import { Header } from "./components";
-import Footer from "./components/footer";
 import { FriendStoreProvider } from "./utils/friendsStore";
-import About from "./views/about";
+import { ProjectStoreProvider } from "./utils/projectsStore";
+import { Home, Projects } from "./views";
+import { Header, Footer } from "./components";
 
 export default function App() {
     return (
@@ -11,11 +10,14 @@ export default function App() {
             <BrowserRouter>
                 <Header />
                 <FriendStoreProvider>
-                    <Routes>
-                        <Route path="*" element={<Navigate to="/" />} />
-                        <Route path="/" element={<Home />} />
-                        <Route path="/about" element={<About />} />
-                    </Routes>
+                    <ProjectStoreProvider>
+                        <Routes>
+                            <Route path="*" element={<Navigate to="/" />} />
+                            <Route path="/" element={<Home />} />
+                            <Route path="/projects" element={<Projects />} />
+                            {/* <Route path="/blog" element={<Blog />} /> */}
+                        </Routes>
+                    </ProjectStoreProvider>
                 </FriendStoreProvider>
 
                 <Footer />

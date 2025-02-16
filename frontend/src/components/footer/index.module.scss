@@ -11,4 +11,21 @@ $trans-colors: #5BCEFA, #F5A9B8, #FFFFFF;
     padding-top: 1rem;
     justify-content: center;
     text-align: center;
+
+    &>div {
+        display: flex;
+        width: 100%;
+        gap: 10px;
+        position: absolute;
+
+        &>div {
+            margin-left: 5px;
+            display: flex;
+            gap: 10px;
+
+            &>a {
+                font-size: 20px
+            }
+        }
+    }
 }

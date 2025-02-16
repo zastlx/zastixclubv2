@@ -35,9 +35,10 @@ export default function Header() {
                 </p>
             </div>
             <div className={styles.buttons}>
-                <Button to="/about">About</Button>
+                <Button to="/">Home</Button>
                 <Button to="/projects">Projects</Button>
-                <Button to="/contact">Contact</Button>
+                {/* <Button to="/blog">Blog</Button> */}
+                {/* <Button to="/contact">Contact</Button> */}
             </div>
         </header>
     )
