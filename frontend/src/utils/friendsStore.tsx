@@ -17,7 +17,6 @@ export function FriendStoreProvider({ children }: { children: React.ReactNode })
     useEffect(() => {
         const _friends = [
             { id: "173622312053112832", link: "https://xotic.org/" },
-            { id: "1021090674289942600", link: "https://crit.rip" },
             { id: "190733468550823945", link: "https://github.com/ItsSyfe" },
             { id: "709534876361162765", link: "https://www.youtube.com/@Pig_55" },
             { id: "1186832040197361746", link: "https://www.onedumbduck.com/" },
@@ -26,12 +25,16 @@ export function FriendStoreProvider({ children }: { children: React.ReactNode })
         ];
 
         const fetchFriends = async () => {
-            const friends = await Promise.all(_friends.map(async (review) => {
+            const friends = (await Promise.all(_friends.map(async (review) => {
                 return {
                     ...review,
                     pfp: (await axios.get(`/api/avatar/${review.id}`)).data
                 }
-            }));
+            }))).concat({
+                id: "allie",
+                link: "https://crit.rip/",
+                pfp: "https://crit.rip/assets/profile-BWxKbdzS.jpg"
+            })
             setFriends(friends);
             setIsLoading(false);
         };
