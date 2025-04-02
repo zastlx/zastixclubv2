@@ -23,7 +23,8 @@ export function FriendStoreProvider({ children }: { children: React.ReactNode })
             { id: "812938084375199804", link: "https://discord.gg/yyu2QzhbDA" },
             { id: "1197702222893547590", link: "https://doyle31.com/" },
             { id: "1059605055411601429", link: "https://www.tomcat.sh/" },
-            { id: "570358869235073042", link: "https://tyavaj.com/" } 
+            { id: "570358869235073042", link: "https://tyavaj.com/" },
+            { id: "366469440474447894", link: "https://lycanea.dev/" }
         ];
 
         const fetchFriends = async () => {
