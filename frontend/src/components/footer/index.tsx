@@ -18,14 +18,19 @@ export default function Footer() {
             icon: "fa-brands fa-github",
         },
         {
-            name: "Twitter",
-            link: "https://twitter.com/notzastix",
-            icon: "fa-brands fa-twitter",
+            name: "Bluesky",
+            link: "https://bsky.app/profile/zastix.club",
+            icon: "fa-brands fa-bluesky",
         },
         {
             name: "Discord",
             link: "https://discord.gg/cuzmWS67gJ",
             icon: "fa-brands fa-discord",
+        },
+        {
+            name: "Twitch",
+            link: "https://twitch.tv/zastlx",
+            icon: "fa-brands fa-twitch",
         },
         {
             name: "Reddit",
@@ -37,11 +42,11 @@ export default function Footer() {
             link: "https://youtube.com/@zastix",
             icon: "fa-brands fa-youtube",
         },
-        // {
-        //     name: "Blacket",
-        //     link: "https://blacket.org/stats?name=zastix",
-        //     icon: "fa-sharp fa-solid fa-b",
-        // }
+        {
+            name: "Twitter",
+            link: "https://twitter.com/notzastix",
+            icon: "fa-brands fa-twitter",
+        },
     ] satisfies Social[];
 
     return (

@@ -19,7 +19,6 @@ export function FriendStoreProvider({ children }: { children: React.ReactNode })
             { id: "173622312053112832", link: "https://xotic.org/" },
             { id: "190733468550823945", link: "https://github.com/ItsSyfe" },
             { id: "709534876361162765", link: "https://www.youtube.com/@Pig_55" },
-            { id: "1186832040197361746", link: "https://www.onedumbduck.com/" },
             { id: "812938084375199804", link: "https://discord.gg/yyu2QzhbDA" },
             { id: "1197702222893547590", link: "https://doyle31.com/" },
             { id: "1059605055411601429", link: "https://www.tomcat.sh/" },
@@ -29,15 +28,13 @@ export function FriendStoreProvider({ children }: { children: React.ReactNode })
         ];
 
         const fetchFriends = async () => {
-            const friends = (await Promise.all(_friends.map(async (review) => {
-                return {
-                    ...review,
-                    pfp: (await axios.get(`/api/avatar/${review.id}`)).data
-                }
-            }))).concat({
+            const friends = (await Promise.all(_friends.map(async (review) => ({
+                ...review,
+                pfp: (await axios.get(`/api/avatar/${review.id}`)).data
+            })))).concat({
                 id: "allie",
-                link: "https://crit.rip/",
-                pfp: "https://crit.rip/assets/profile-BWxKbdzS.jpg"
+                pfp: "https://crit.rip/assets/profile-BWxKbdzS.jpg",
+                link: "https://crit.rip"
             })
             setFriends(friends);
             setIsLoading(false);
@@ -54,21 +51,3 @@ export function FriendStoreProvider({ children }: { children: React.ReactNode })
         </FriendStoreContext.Provider>
     );
 }
-
-// class FriendsManagerClass {
-//     friends: Friend[] = [];
-
-//     constructor() {
-//         this.loadFriends();
-//     }
-
-//     async loadFriends() {
-//         
-//         this.friends = await Promise.all(friends.map(async (review) => {
-//             return {
-//                 ...review,
-//                 pfp: (await axios.get(`/api/avatar/${review.id}`)).data
-//             }
-//         }));
-//     }
-// }

@@ -32,21 +32,3 @@ export function ProjectStoreProvider({ children }: { children: React.ReactNode }
         </ProjectStoreContext.Provider>
     );
 }
-
-// class FriendsManagerClass {
-//     friends: Friend[] = [];
-
-//     constructor() {
-//         this.loadFriends();
-//     }
-
-//     async loadFriends() {
-//         
-//         this.friends = await Promise.all(friends.map(async (review) => {
-//             return {
-//                 ...review,
-//                 pfp: (await axios.get(`/api/avatar/${review.id}`)).data
-//             }
-//         }));
-//     }
-// }
