@@ -24,7 +24,12 @@ export function FriendStoreProvider({ children }: { children: React.ReactNode })
             { id: "1059605055411601429", link: "https://www.tomcat.sh/" },
             { id: "570358869235073042", link: "https://tyavaj.com/" },
             { id: "366469440474447894", link: "https://lycanea.dev/" },
-            { id: "1346963494024642710", link: "https://wurdle.eu/" }
+            { id: "1346963494024642710", link: "https://wurdle.eu/" },
+            { id: "640394037190197258", link: "https://www.twitch.tv/lemonssalicious" },
+            { id: "804029208677711973", link: "https://www.twitch.tv/weblol_" },
+            { id: "896600182190395423", link: "https://www.twitch.tv/VoidAces" },
+            { id: "299287877525700608", link: "https://www.twitch.tv/Thee_Owl" },
+            { id: "1249439327440601147", link: "https://villainsrule.xyz/" }
         ];
 
         const fetchFriends = async () => {
