@@ -32,7 +32,7 @@ export class AvatarService {
 	async getAvatar(userid: string): Promise<string> {
 		try {
 			const user = await this.fetchUser(userid);
-			return `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size4096`;
+			return `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size=4096`;
 		} catch (e) {
 			throw e;
 		}
