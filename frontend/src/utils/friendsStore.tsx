@@ -16,7 +16,6 @@ export function FriendStoreProvider({ children }: { children: React.ReactNode })
 
     useEffect(() => {
         const _friends = [
-            { id: "173622312053112832", link: "https://xotic.org/" },
             { id: "190733468550823945", link: "https://github.com/ItsSyfe" },
             { id: "709534876361162765", link: "https://www.youtube.com/@Pig_55" },
             { id: "812938084375199804", link: "https://discord.gg/yyu2QzhbDA" },
